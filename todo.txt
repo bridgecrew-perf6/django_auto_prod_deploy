@@ -1,0 +1,3 @@
+Modify Dockerfile so project must be in host localfile .
+Push host locfile to container with COPY instruction
+Update port output from gunicorn (Dockerfile) ? Might not be necessary as bridge implmented later on

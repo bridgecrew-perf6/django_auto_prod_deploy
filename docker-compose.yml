@@ -1,0 +1,12 @@
+version : '3.8'
+
+services :
+
+  djangoapp:
+    build: .
+    volumes :
+      - .:/home/user/src
+    ports:
+      - 80:80
+
+# Change ports number in Dockerfile, so gunicron delivers accordingly
