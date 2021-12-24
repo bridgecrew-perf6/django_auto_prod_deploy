@@ -17,4 +17,4 @@ COPY . /home/user/src
 
 EXPOSE 80
 
-CMD ["gunicorn","--chdir","project","--bind",":80","config.wsgi"]
+CMD ["gunicorn","--bind",":80","config.wsgi"]
