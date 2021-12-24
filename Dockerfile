@@ -5,19 +5,15 @@ WORKDIR /home/user/src
 
 RUN apt update && apt upgrade
 
-RUN apt install -y nano git
-
 RUN apt autoremove && apt clean
 
-RUN git clone https://github.com/roldel/project.git
-
-RUN pip install -r project/requirements.txt
+RUN pip install -r requirements.txt
 
 #Manually install pip dependencies
 #RUN pip install django gunicorn
 
 #Used  to copy files from host . to container workdir directory
-#COPY . /home/user/src
+COPY . /home/user/src
 
 EXPOSE 80
 
