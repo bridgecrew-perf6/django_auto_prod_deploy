@@ -7,13 +7,14 @@ RUN apt update && apt upgrade
 
 RUN apt autoremove && apt clean
 
+COPY . /home/user/src
+
 RUN pip install -r requirements.txt
 
 #Manually install pip dependencies
 #RUN pip install django gunicorn
 
 #Used  to copy files from host . to container workdir directory
-COPY . /home/user/src
 
 EXPOSE 80
 
