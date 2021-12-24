@@ -1,3 +1,5 @@
 Modify Dockerfile so project must be in host localfile .
 Push host locfile to container with COPY instruction
 Update port output from gunicorn (Dockerfile) ? Might not be necessary as bridge implmented later on
+
+https://pawamoy.github.io/posts/docker-compose-django-postgres-nginx/
