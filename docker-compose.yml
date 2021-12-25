@@ -2,22 +2,30 @@ version : '3.8'
 
 services :
 
-  djangoapp:
-    build: .
+  django_gunicorn:
+    build:
+      context : .
     volumes :
       - .:/home/user/src
+      - static:/static
+    #env_file :
+      #-.env
     ports:
-      - 8000:8000
-      
-    #Try replacing open port with expose command for containers comm
-    
-    
-    
-  # add nginx service
+      - 8000:8000 
+    #? Try replacing open port with expose command for containers comm ?
   
-  #nginx:
-    #ports : 
-      #- 80:80
+  nginx:
+  
+    build: ./nginx
+    ports : 
+      - 80:80
+    volumes:
+      - static:/static
+    depends_on:
+      - django_gunicorn
+
+volumes:
+  static:
 
 # ADD dockerfile for nginx
 # ADD a static shared volume
