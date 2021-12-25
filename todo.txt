@@ -1,5 +1,12 @@
-Modify Dockerfile so project must be in host localfile .
-Push host locfile to container with COPY instruction
-Update port output from gunicorn (Dockerfile) ? Might not be necessary as bridge implmented later on
+Additional tasks to be completd :
 
+_ Set server nginxtokens off
+_ Expose server logs to secure with host fail2ban
+
+
+_Check for user privilege downgrade
+https://mherman.org/
+https://github.com/testdrivenio/docker-python-devs/blob/master/web/04_user/Dockerfile
+
+Check out set up adding postgres :
 https://pawamoy.github.io/posts/docker-compose-django-postgres-nginx/

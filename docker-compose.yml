@@ -6,13 +6,14 @@ services :
     build:
       context : .
     volumes :
+      # Main volume containing django project
       - .:/home/user/src
+      # Container volume to hold static files
       - static:/static
+      # Unix socket shared volume
+      - socklink:/socklink
     #env_file :
       #-.env
-    ports:
-      - 7568:7568 
-    #? Try replacing open port with expose command for containers comm ?
   
   nginx:
   
@@ -21,11 +22,10 @@ services :
       - 80:80
     volumes:
       - static:/static
+      - socklink:/socklink
     depends_on:
       - django_gunicorn
 
 volumes:
   static:
-
-# ADD dockerfile for nginx
-# ADD a static shared volume
+  socklink:

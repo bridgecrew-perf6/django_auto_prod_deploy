@@ -1,6 +1,6 @@
 #!/bin/sh
 
-python manage.py migrate #--no-input
-python manage.py collectstatic #--no-input
+python manage.py migrate --no-input
+python manage.py collectstatic --no-input
 
-gunicorn config.wsgi:application --bind 0.0.0.0:7568
+gunicorn --bind unix:/socklink/connect.sock config.wsgi:application
