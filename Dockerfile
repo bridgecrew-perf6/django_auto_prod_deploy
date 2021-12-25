@@ -14,4 +14,5 @@ RUN pip install -r requirements.txt
 
 EXPOSE 8000
 
-CMD ["gunicorn","--bind",":8000","config.wsgi"]
+#CMD ["gunicorn","--bind",":8000","config.wsgi"]
+ENTRYPOINT ["sh", "entrypoint.sh"]
