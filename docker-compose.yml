@@ -7,6 +7,17 @@ services :
     volumes :
       - .:/home/user/src
     ports:
-      - 80:80
+      - 8000:8000
+      
+    #Try replacing open port with expose command for containers comm
+    
+    
+    
+  # add nginx service
+  
+  #nginx:
+    #ports : 
+      #- 80:80
 
-# Change ports number in Dockerfile, so gunicron delivers accordingly
+# ADD dockerfile for nginx
+# ADD a static shared volume
