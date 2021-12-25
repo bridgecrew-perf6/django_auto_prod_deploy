@@ -11,7 +11,7 @@ services :
     #env_file :
       #-.env
     ports:
-      - 8000:8000 
+      - 7568:7568 
     #? Try replacing open port with expose command for containers comm ?
   
   nginx:
