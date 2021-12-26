@@ -1,7 +1,7 @@
 Additional tasks to be completd :
 
-_ Set server nginxtokens off
-_ Expose server logs to secure with host fail2ban
+_ Set nginx server tokens off ?
+_ Smart way to share server logs with host to secure from host fail2ban
 
 
 _Check for user privilege downgrade
