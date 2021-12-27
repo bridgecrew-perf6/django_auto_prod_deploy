@@ -10,3 +10,10 @@ https://github.com/testdrivenio/docker-python-devs/blob/master/web/04_user/Docke
 
 Check out set up adding postgres :
 https://pawamoy.github.io/posts/docker-compose-django-postgres-nginx/
+
+
+Remove default project from git repo
+
+Add instructions to adpat to new or existing porject
+
+Change repo name, django_auto_prod_deploy ?
