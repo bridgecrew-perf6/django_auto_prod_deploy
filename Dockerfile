@@ -1,9 +1,10 @@
 FROM python:slim
 
 RUN mkdir -p /home/user/src
+
 WORKDIR /home/user/src
 
-# RUN apt update && apt autoremove && apt clean
+# RUN apt update 
 
 COPY . /home/user/src
 
