@@ -1,12 +1,18 @@
-FROM python:slim
+FROM python:alpine
+LABEL maintainer="Roland DELATTRE"
 
-RUN mkdir -p /home/user/src
+ENV PYTHONUNBUFFERED 1
 
-WORKDIR /home/user/src
+RUN mkdir /app
+
+WORKDIR /app
 
 # RUN apt update 
 
-COPY . /home/user/src
+COPY . /app
+
+#python -m venv pyenv
+# pyenv/bin/pip install --upgrade pip 
 
 RUN pip install --upgrade pip
 
