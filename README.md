@@ -23,7 +23,7 @@
 &nbsp;
 &nbsp;
 
-### :rocket: Setup instructions : :rocket:
+### :wrench: Setup instructions : 🔨
 
 &nbsp;
 &nbsp;
@@ -58,10 +58,26 @@ gunicorn --bind unix:/socklink/connect.sock mywebsite.wsgi:application
 &nbsp;
 
 - **Move this repo content** into your django project directory
+
 ```script
 mv django_auto_prod_deploy/* <your_django_project_path>
-
 ```
+
+<hr>
+
+&nbsp;
+&nbsp;
+
+### :rocket: Start up everything ! :rocket:
+
+
+```script
+docker-compose up
+```
+
+&nbsp;
+&nbsp;
+
 <hr>
 
 ### Further developments for this repo
