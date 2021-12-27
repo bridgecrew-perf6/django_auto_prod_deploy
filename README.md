@@ -45,7 +45,14 @@ gunicorn
 ```
 &nbsp;
 
-- **Update the entrypoint.sh :** so it knows where to look for the wsgi file
+- **Update the entrypoint.sh :** To serve your project, gunicorn needs to know where to find the wsgi file. It is created by default in the same directory as your settings.py file.
+```script
+gunicorn --bind unix:/socklink/connect.sock <config>.wsgi:application
+```
+If the name of the directory containing your settings.py and wsgi file is "mywebsite", your entrypoint.sh should be :
+ ```script
+gunicorn --bind unix:/socklink/connect.sock mywebsite.wsgi:application
+```
 
 &nbsp;
 &nbsp;
@@ -55,9 +62,9 @@ gunicorn
 mv django_auto_prod_deploy/* <your_django_project_path>
 
 ```
+<hr>
 
-
-Further developments for this repo
+### Further developments for this repo
 
 Increase security : 
 
