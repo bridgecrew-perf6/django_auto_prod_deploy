@@ -1,14 +1,19 @@
-# Django automated deployment ( gunicron + nginx )
+# Automated Django production deployment ft docker-compose :octopus:
 
-### This project is an automated solution to deploy your django app
+## This repo will :
+
+### - Create a django_gunicorn container arround your project
+### - install your dependencies (pip)
+### - create volumes to share static files and a unix socket to connect to nginx
+### - create an nginx container to serve your static files or reverse proxy to your gunicron server as needed
 
 
+<hr>
 
-It will copy your django project into a container
-From there, it will install your required packages ( from requirements.txt )
+!!! Work in progress !!! ⬇️
 
 
-What you have to do :
+### Setup instructions :
 
 Set the static root in your project settings.py file as :
 
