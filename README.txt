@@ -1,4 +1,8 @@
-This project is an automated solution to deploy your django app
+# Django automated deployment ( gunicron + nginx )
+
+### This project is an automated solution to deploy your django app
+
+
 
 It will copy your django project into a container
 From there, it will install your required packages ( from requirements.txt )
