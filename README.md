@@ -4,9 +4,8 @@
 
 ### - Create a django_gunicorn container arround your project
 ### - install your dependencies (pip)
-### - create volumes to share static files and a unix socket to connect between the containers
+### - create volumes to share static files and a unix socket to connect between containers
 ### - create an nginx container to serve your static files or reverse proxy to your gunicron server as needed
-
 
 <hr>
 
