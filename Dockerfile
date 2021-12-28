@@ -1,5 +1,5 @@
 FROM python:alpine
-LABEL maintainer="Roland DELATTRE"
+LABEL maintainer="Rol DEL"
 
 ENV PYTHONUNBUFFERED 1
 
@@ -13,6 +13,7 @@ COPY . /app
 
 #python -m venv pyenv
 # pyenv/bin/pip install --upgrade pip 
+# pyenv/bin/pip install requirements.txt 
 
 RUN pip install --upgrade pip
 
